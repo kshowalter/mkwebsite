@@ -1,4 +1,4 @@
-export default function(store, custom_actions){
+export default function(store, custom_reducers){
   var actions = {
     __store: store,
     __dispatch: function(action_config){
@@ -6,11 +6,13 @@ export default function(store, custom_actions){
     },
   };
 
-  for( var action_name in custom_actions ){
+  for( var action_name in custom_reducers ){
     actions[action_name] = function(){
-      var action_making_function = custom_actions[action_name];
-      console.log('action: ', action_name);
-      this.__dispatch( action_making_function(arguments[0], arguments[1], arguments[2], arguments[3], arguments[4] ));
+      //console.log('action name: ', action_name);
+      this.__dispatch({
+        type: action_name,
+        arguments: arguments
+      });
     };
   }
 

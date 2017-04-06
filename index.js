@@ -1,11 +1,12 @@
-import Actions from './Actions';
-import Reducer from './Reducer';
+//import Actions from './Actions';
+//import Reducer from './Reducer';
+import create_actions_reducer from './create_actions_reducer';
 import router from './router';
 import Specdom  from 'specdom';
 
 var global = window || global;
 
-export default function(target_element, init_state, custom_actions, custom_reducers, on_change){
+export default function(target_element, init_state, custom_reducers, on_change){
   var target_id = target_element.id;
   var specdom = Specdom('#'+target_id);
 

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kshowalter/mkwebsite/issues"
   },
-  "homepage": "https://github.com/kshowalter/mkwebsite#readme"
+  "homepage": "https://github.com/kshowalter/mkwebsite#readme",
+  "dependencies": {
+    "specdom": "kshowalter/specdom"
+  }
 }
