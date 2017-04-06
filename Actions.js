@@ -9,7 +9,7 @@ export default function(store, custom_reducers){
   for( var action_name in custom_reducers ){
     actions[action_name] = function(){
       //console.log('action name: ', action_name);
-      this.__dispatch({
+      actions.__dispatch({
         type: action_name,
         arguments: arguments
       });
