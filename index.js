@@ -5,8 +5,9 @@ import Specdom  from 'specdom';
 var global = window || global;
 
 export default function(target_element, init_state, custom_reducers, on_change){
-  var target_id = target_element.id;
-  var specdom = Specdom('#'+target_id);
+  //var target_id = target_element.id;
+  //var specdom = Specdom('#'+target_id);
+  var specdom = Specdom(target_element);
 
   var reducer = Reducer(custom_reducers);
 
