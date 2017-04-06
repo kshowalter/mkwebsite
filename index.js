@@ -1,6 +1,5 @@
-//import Actions from './Actions';
-//import Reducer from './Reducer';
-import create_actions_reducer from './create_actions_reducer';
+import Actions from './Actions';
+import Reducer from './Reducer';
 import router from './router';
 import Specdom  from 'specdom';
 
