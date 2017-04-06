@@ -13,7 +13,7 @@ export default function(target_element, init_state, custom_reducers, on_change){
 
   var create_store = require('redux').createStore;
   var store = create_store(reducer, init_state);
-  var actions = Actions(store, custom_actions);
+  var actions = Actions(store, custom_reducers);
 
   var stored_route = sessionStorage.getItem('route');
   if( stored_route ){
