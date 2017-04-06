@@ -1,0 +1,19 @@
+{
+  "name": "mkwebsite",
+  "version": "0.1.0",
+  "description": "A module for state based website rendering.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshowalter/mkwebsite.git"
+  },
+  "author": "Keith Showalter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshowalter/mkwebsite/issues"
+  },
+  "homepage": "https://github.com/kshowalter/mkwebsite#readme"
+}
