@@ -19,8 +19,6 @@ export default function(target_element, init_state, custom_reducers, on_change){
     actions.route(stored_route);
   }
 
-  router(actions);
-
   /** anonymous function that runs when the store is updated. */
   store.subscribe(function(){
     var state = store.getState();
