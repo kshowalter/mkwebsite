@@ -1,6 +1,5 @@
 import Actions from './Actions';
 import Reducer from './Reducer';
-import router from './router';
 import Specdom  from 'specdom';
 
 var global = window || global;
@@ -25,19 +24,9 @@ export default function(target_element, init_state, custom_reducers, on_change){
   /** anonymous function that runs when the store is updated. */
   store.subscribe(function(){
     var state = store.getState();
-    global.state = state; // devmode
-    console.log('state change: ', state);
-
-    sessionStorage.setItem('selected_subject', state.ui.selected_subject);
-
     var page_spec = on_change(state, actions);
-
     specdom.load(page_spec);
-
-    //store.dispatch({
-    //  type: 'init'
-    //});
   });
 
-
+  return actions;
 }
