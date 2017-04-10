@@ -1,6 +1,7 @@
 import Actions from './Actions';
 import Reducer from './Reducer';
 import Specdom  from 'specdom';
+//import clone from './clone';
 
 var global = window || global;
 
@@ -23,6 +24,7 @@ export default function(target_element, init_state, custom_reducers, on_change){
   /** anonymous function that runs when the store is updated. */
   store.subscribe(function(){
     var state = store.getState();
+    //state = clone(state);
     var page_spec = on_change(state, actions);
     specdom.load(page_spec);
   });
