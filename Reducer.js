@@ -8,7 +8,7 @@ export default function(custom_reducers){
     if( custom_reducers[action.type] ){
       return custom_reducers[action.type](state, action);
     } else {
-      console.log('NO ACTION HANDLER FOUND');
+      console.log('NO ACTION HANDLER FOUND: ', action.type);
       return state;
     }
 
