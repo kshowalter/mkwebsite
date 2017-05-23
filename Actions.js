@@ -16,10 +16,8 @@ export default function(store, custom_reducers){
     },
   };
   for( var action_name in custom_reducers ){
-    console.log('action name: ', action_name);
     actions[action_name] = mkAction(actions, action_name);
   }
-  console.log('actions: ', actions);
 
   return actions;
 }
